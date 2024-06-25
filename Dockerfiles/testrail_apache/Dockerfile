@@ -133,3 +133,5 @@ CMD ["apache2-foreground"]
 
 WORKDIR /var/www/testrail
 EXPOSE 80
+
+RUN sed -i "s/date.timezone = UTC/date.timezone = Europe\/Berlin/g" /usr/local/etc/php/conf.d/php.ini
